@@ -3,7 +3,6 @@ package com.britney.crud_app.models;
 import java.util.Date;
 
 import jakarta.persistence.*;
-// import jakarta.persistence.Id;
 // import jakarta.persistence.Table;
 
 @Entity
@@ -17,15 +16,16 @@ public class Product {
     private String name;
     private String brand;
     private String category;
-    private String price;
+    private double price;
 
     @Column(columnDefinition = "TEXT")
     private String description;
     private Date createdAt;
     private String imageFileName;
 
+
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -33,7 +33,7 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -41,7 +41,7 @@ public class Product {
     }
 
     public String getBrand() {
-        return brand;
+        return this.brand;
     }
 
     public void setBrand(String brand) {
@@ -49,23 +49,23 @@ public class Product {
     }
 
     public String getCategory() {
-        return category;
+        return this.category;
     }
 
     public void setCategory(String category) {
         this.category = category;
     }
 
-    public String getPrice() {
-        return price;
+    public double getPrice() {
+        return this.price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -73,7 +73,7 @@ public class Product {
     }
 
     public Date getCreatedAt() {
-        return createdAt;
+        return this.createdAt;
     }
 
     public void setCreatedAt(Date createdAt) {
@@ -81,7 +81,7 @@ public class Product {
     }
 
     public String getImageFileName() {
-        return imageFileName;
+        return this.imageFileName;
     }
 
     public void setImageFileName(String imageFileName) {
